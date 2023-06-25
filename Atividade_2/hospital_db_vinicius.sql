@@ -1,3 +1,4 @@
+CREATE DATABASE hospital_db_vinicius;
 USE hospital_db_vinicius;
 CREATE TABLE medico (
 	id INT NOT NULL AUTO_INCREMENT,
@@ -81,6 +82,10 @@ CREATE TABLE internacao (
     medico_id INT NOT NULL,
     paciente_id INT NOT NULL,
     enfermeiro_id INT NOT NULL,
+    data_entrada DATETIME NOT NULL,
+    previsao_alta DATETIME NOT NULL,
+    data_alta DATETIME,
+    procedimento VARCHAR(255) NOT NULL,
     PRIMARY KEY(id),
     FOREIGN KEY (quarto_id) REFERENCES quarto(id),
     FOREIGN KEY (medico_id) REFERENCES medico(id),
