@@ -23,16 +23,16 @@ INSERT INTO paciente (nome, cpf, rg, convenio_id, tempo_carencia, telefone, emai
 ('Juliana Santos', 753951852, 54321876, 1, '2015-12-02', 1187754321, 'julianasantos@gmail.com'),
 ('Gustavo Lima', 258741369, 21870543, 2, '2016-06-28', 1176543218, 'gustavolima@gmail.com');
 -- Inserindo 10 consultas
-INSERT INTO consultas (id_medico, id_paciente, id_convenio, carteirinha, data_consulta, valor) VALUES (2, 1, 1, 123456, '2017-05-13', 100),
-(1, 3, NULL, NULL, '2017-07-13', 100),
-(2, 1, 1, 123456, '2017-08-13', 100),
-(1, 3, NULL, NULL, '2017-09-13', 100),
-(4, 2, 3, 654321, '2018-01-13', 100),
-(5, 4, NULL, NULL, '2018-02-13', 100),
-(6, 5, 3, 879080, '2018-04-13', 100),
-(7, 6, 4, 642890, '2019-05-13', 100),
-(8, 7, 2, 000099, '2020-08-13', 100),
-(3, 8, 3, 999900, '2022-11-13', 100);
+INSERT INTO consultas (id_medico, id_paciente, id_convenio, carteirinha, data_consulta, valor, id_especialidade) VALUES (2, 1, 1, 123456, '2017-05-13', 100, 3),
+(1, 3, NULL, NULL, '2017-07-13', 100, 2),
+(2, 1, 1, 123456, '2017-08-13', 100, 3),
+(1, 3, NULL, NULL, '2017-09-13', 100, 1),
+(4, 2, 3, 654321, '2018-01-13', 100, 4),
+(5, 4, NULL, NULL, '2018-02-13', 100, 6),
+(6, 5, 3, 879080, '2018-04-13', 100, 6),
+(7, 6, 4, 642890, '2019-05-13', 100, 7),
+(8, 7, 2, 000099, '2020-08-13', 100, 7),
+(3, 8, 3, 999900, '2022-11-13', 100, 4);
 -- Inserindo 5 receitas com ao menos dois remedios
 INSERT INTO prescricoes (remedio, id_consulta) VALUES ("Tilenol", 2);
 INSERT INTO prescricoes (remedio, id_consulta) VALUES ("Vick Vapurub", 2);

@@ -47,10 +47,12 @@ CREATE TABLE consultas (
     carteirinha INT,
     data_consulta DATETIME NOT NULL,
     valor DECIMAL(9,2) NOT NULL,
+    id_especialidade INT NOT NULL,
     PRIMARY KEY(id),
     FOREIGN KEY (id_medico) REFERENCES medico(id),
     FOREIGN KEY (id_paciente) REFERENCES paciente(id),
-    FOREIGN KEY (id_convenio) REFERENCES convenio(id)
+    FOREIGN KEY (id_convenio) REFERENCES convenio(id) ON DELETE CASCADE,
+	FOREIGN KEY (id_especialidade) REFERENCES especialidade(id) 
 );
 CREATE TABLE prescricoes (
 	id INT NULL AUTO_INCREMENT,
