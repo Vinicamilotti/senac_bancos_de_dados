@@ -12,19 +12,20 @@ INSERT INTO medico (nome, crm) VALUES ("Júlia Camarinho", "CRM/SP 123456"),
 -- Atribuindo medicos a especialidades
 INSERT INTO especialista (medico_id, especialidade_id) VALUES (1,1), (1,2), (2,3), (3,4), (5,6), (6,6), (7,7), (8,7), (9,5), (4,4);
 -- Inserindo 10 pacientes
-INSERT INTO paciente (nome, cpf, rg, convenio_id, tempo_carencia, telefone, email) VALUES ("João Prado", 123456789, 31234556, 1, '2015-03-05', 1140233530, "joaoprado@gmail.com"), ('Maria Silva', '987654321', '54321678', 2, '2021-01-15', '1198765432', 'mariasilva@gmail.com'),
-('Pedro Santos', 456789123, 87654321, 3, '2016-04-20', 1187654321, 'pedrosantos@gmail.com'),
-('Ana Souza', 654321987, 43218765, null, null, 1165432187, 'anasouza@gmail.com'),
-('Lucas Oliveira', 789123456, 76543218, null, null, 1154321876, 'lucasoliveira@gmail.com'),
-('Carolina Mendes', 321987654, 21876543, 3, '2016-07-25', 1143218765, 'carolinamendes@gmail.com'),
-('Ricardo Almeida', 852963741, 54320876, 4, '2016-06-12', 1121876543, 'ricardoalmeida@gmail.com'),
-('Patricia Costa', 159753852, 32187654, 2, '2015-03-05', 1115432187, 'patriciacosta@gmail.com'),
-('Fernando Ribeiro', 369852147, 87654341, 3, '2017-08-17', 1198763432, 'fernandoribeiro@gmail.com'),
-('Juliana Santos', 753951852, 54321876, 1, '2015-12-02', 1187754321, 'julianasantos@gmail.com'),
-('Gustavo Lima', 258741369, 21870543, 2, '2016-06-28', 1176543218, 'gustavolima@gmail.com');
+INSERT INTO paciente (nome, cpf, rg, convenio_id, tempo_carencia, telefone, email, data_nascimento) VALUES ("João Prado", 123456789, 31234556, 1, '2015-03-05', 1140233530, "joaoprado@gmail.com",'1997-06-21'), 
+('Maria Silva', '987654321', '54321678', 2, '2021-01-15', '1198765432', 'mariasilva@gmail.com', '2002-06-21'),
+('Pedro Santos', 456789123, 87654321, 3, '2016-04-20', 1187654321, 'pedrosantos@gmail.com', '2002-12-23'),
+('Ana Souza', 654321987, 43218765, null, null, 1165432187, 'anasouza@gmail.com','2002-03-12'),
+('Lucas Oliveira', 789123456, 76543218, null, null, 1154321876, 'lucasoliveira@gmail.com', '1998-04-09'),
+('Carolina Mendes', 321987654, 21876543, 3, '2016-07-25', 1143218765, 'carolinamendes@gmail.com', '1998-04-09'),
+('Ricardo Almeida', 852963741, 54320876, 4, '2016-06-12', 1121876543, 'ricardoalmeida@gmail.com', '1996-02-09'),
+('Patricia Costa', 159753852, 32187654, 2, '2015-03-05', 1115432187, 'patriciacosta@gmail.com', '1995-03-09'),
+('Fernando Ribeiro', 369852147, 87654341, 3, '2017-08-17', 1198763432, 'fernandoribeiro@gmail.com', '1999-04-09'),
+('Juliana Santos', 753951852, 54321876, 1, '2015-12-02', 1187754321, 'julianasantos@gmail.com', '2000-04-09'),
+('Gustavo Lima', 258741369, 21870543, 2, '2016-06-28', 1176543218, 'gustavolima@gmail.com', '2001-04-09');
 -- Inserindo 10 consultas
 INSERT INTO consultas (id_medico, id_paciente, id_convenio, carteirinha, data_consulta, valor, id_especialidade) VALUES (2, 1, 1, 123456, '2017-05-13', 100, 3),
-(1, 3, NULL, NULL, '2017-07-13', 100, 2),
+(1, 3, NULL, NULL, '2017-07-13', 100, 1),
 (2, 1, 1, 123456, '2017-08-13', 100, 3),
 (1, 3, NULL, NULL, '2017-09-13', 100, 1),
 (4, 2, 3, 654321, '2018-01-13', 100, 4),

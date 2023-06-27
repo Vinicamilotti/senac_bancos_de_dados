@@ -35,6 +35,7 @@ CREATE TABLE paciente (
     tempo_carencia DATE,
     telefone INT NOT NULL UNIQUE,
     email VARCHAR(255) NOT NULL UNIQUE,
+    data_nascimento DATE NOT NULL,
     PRIMARY KEY (id),
     FOREIGN KEY (convenio_id) REFERENCES convenio(id)
 );
@@ -90,9 +91,9 @@ CREATE TABLE internacao (
     quarto_id INT NOT NULL,
     medico_id INT NOT NULL,
     paciente_id INT NOT NULL,
-    data_entrada DATETIME NOT NULL,
-    previsao_alta DATETIME NOT NULL,
-    data_alta DATETIME,
+    data_entrada DATE NOT NULL,
+    previsao_alta DATE NOT NULL,
+    data_alta DATE,
     especialidade_id INT NOT NULL,
     PRIMARY KEY(id),
     FOREIGN KEY (quarto_id) REFERENCES quarto(id),
