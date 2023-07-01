@@ -95,6 +95,7 @@ CREATE TABLE internacao (
     previsao_alta DATE NOT NULL,
     data_alta DATE,
     especialidade_id INT NOT NULL,
+    procedimento VARCHAR(255) NOT NULL,
     PRIMARY KEY(id),
     FOREIGN KEY (quarto_id) REFERENCES quarto(id),
     FOREIGN KEY (medico_id) REFERENCES medico(id),

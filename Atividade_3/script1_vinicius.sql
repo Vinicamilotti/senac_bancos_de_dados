@@ -55,13 +55,13 @@ INSERT INTO enfermeiro (nome, cre, cpf) VALUES ("André Calil", 132456, 12344567
 ("Aldo Meli", 576129,0902938485),
 ("Alicia Terron", 831943, 831930491);
 -- Criando 7 internações com 1 paciente, 1 médico e 1 quarto associados
-INSERT INTO internacao (quarto_id, medico_id, paciente_id, data_entrada, previsao_alta, data_alta, especialidade_id) VALUES (1, 2, 9, '2019-04-14', '2019-04-16', '2019-04-16',3),
-(1, 2, 10, '2019-05-15', '2021-05-16', '2021-05-17', 3),
-(3, 4, 8, '2020-04-20', '2020-04-22', '2020-04-25', 5),
-(1, 2, 9, '2020-04-14', '2020-04-16', '2020-04-16', 3),
-(2, 5, 3, '2021-03-14', '2021-03-16', '2021-03-16', 6),
-(2, 1, 6, '2021-03-14', '2021-03-16', '2021-03-17', 1),
-(1, 2, 4, '2021-03-14', '2021-03-16', '2021-04-16', 3);
+INSERT INTO internacao (quarto_id, medico_id, paciente_id, data_entrada, previsao_alta, data_alta, especialidade_id, procedimento) VALUES (1, 2, 9, '2019-04-14', '2019-04-16', '2019-04-16',3, "Observação"),
+(1, 2, 10, '2019-05-15', '2021-05-16', '2021-05-17', 3, "Observação"),
+(3, 4, 8, '2020-04-20', '2020-04-22', '2020-04-25', 5, "Observação"),
+(1, 2, 9, '2020-04-14', '2020-04-16', '2020-04-16', 3, "Observação"),
+(2, 5, 3, '2021-03-14', '2021-03-16', '2021-03-16', 6, "Observação"),
+(2, 1, 6, '2021-03-14', '2021-03-16', '2021-03-17', 1, "Observação"),
+(1, 2, 4, '2021-03-14', '2021-03-16', '2021-04-16', 3, "Observação");
 -- Associando 2 enfermeiros para cada internação
 INSERT INTO internacao_enfermeiro (id_internacao, id_enfermeiro) VALUES (1, 1), (1,2);
 INSERT INTO internacao_enfermeiro (id_internacao, id_enfermeiro) VALUES (2, 3), (2,4);
