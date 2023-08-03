@@ -1,0 +1,10 @@
+CREATE USER 'user_relatorio'@'localhost';
+CREATE USER 'user_funcionario'@'localhost';
+CREATE ROLE 'relator', 'funcionario';
+GRANT SELECT ON uc4atividades.* TO relator;
+GRANT SELECT, UPDATE, DELETE, INSERT ON uc4atividades.cliente TO funcionario;
+GRANT SELECT, UPDATE, DELETE, INSERT ON uc4atividades.produto TO funcionario;
+GRANT SELECT, UPDATE, DELETE, INSERT ON uc4atividades.venda TO funcionario;
+GRANT SELECT, UPDATE, DELETE, INSERT ON uc4atividades.item_venda TO funcionario;
+GRANT relator TO 'user_relatorio'@'localhost';
+GRANT funcionario TO 'user_funcionario'@'localhost';
